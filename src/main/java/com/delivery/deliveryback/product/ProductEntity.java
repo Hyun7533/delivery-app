@@ -1,29 +1,27 @@
 package com.delivery.deliveryback.product;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.util.Date;
+
 @Data
-@Getter
 public class ProductEntity {
 
-    private long id;
+    private Integer productSeq;
 
-    private String name;
+    private String productName;
 
-    private int age;
+    private Integer productPrice;
 
-    private String address;
+    private Date insertTime;
 
-    private int salary;
-
-    public ProductEntity(long id, String name, int age, String address, int salary) {
-        this.id = id;
-        this.name = name;
-        this.age = age;
-        this.address = address;
-        this.salary = salary;
+    public ProductEntity(Integer productSeq, String productName, Integer productPrice, Date insertTime) {
+        this.productSeq = productSeq;
+        this.productName = productName;
+        this.productPrice = productPrice;
+        this.insertTime = insertTime;
     }
-
 }
