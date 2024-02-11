@@ -13,7 +13,7 @@ public class ProductController {
 
     private final ProductService productService;
 
-    @GetMapping("/")
+    @GetMapping("/product")
     public List<ProductEntity> searchProduct() {
         return productService.searchProduct();
     }
