@@ -8,14 +8,19 @@ import org.springframework.web.bind.annotation.RestController;
 import java.util.List;
 
 @RestController
-@RequiredArgsConstructor
 public class ProductController {
 
     private final ProductService productService;
 
+    @Autowired
+    public ProductController(ProductService productService) {
+    	this.productService = productService;
+    }
+    
     @GetMapping("/product")
     public List<ProductEntity> searchProduct() {
         return productService.searchProduct();
     }
+
 
 }

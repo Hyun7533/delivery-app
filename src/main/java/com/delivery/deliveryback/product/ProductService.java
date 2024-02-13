@@ -7,12 +7,18 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 
 @Service
-@RequiredArgsConstructor
 public class ProductService {
 
+	@Autowired
     private final ProductMapper productMapper;
+	
+    public ProductService(ProductMapper productMapper) {
+		this.productMapper = productMapper;
+	}
 
-    public List<ProductEntity> searchProduct() {
+
+
+	public List<ProductEntity> searchProduct() {
         return productMapper.searchProduct();
     }
 
