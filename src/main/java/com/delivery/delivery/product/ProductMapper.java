@@ -1,4 +1,4 @@
-package com.delivery.deliveryback.product;
+package com.delivery.delivery.product;
 
 import org.apache.ibatis.annotations.Mapper;
 

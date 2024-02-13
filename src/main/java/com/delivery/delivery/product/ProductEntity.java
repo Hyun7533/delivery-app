@@ -1,9 +1,6 @@
-package com.delivery.deliveryback.product;
+package com.delivery.delivery.product;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Data;
-import lombok.Getter;
-import lombok.Setter;
 
 import java.util.Date;
 

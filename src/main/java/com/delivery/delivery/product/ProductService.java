@@ -1,6 +1,5 @@
-package com.delivery.deliveryback.product;
+package com.delivery.delivery.product;
 
-import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

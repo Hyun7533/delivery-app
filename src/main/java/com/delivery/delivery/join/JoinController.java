@@ -1,11 +1,8 @@
-package com.delivery.deliveryback.join;
-
-import lombok.RequiredArgsConstructor;
+package com.delivery.delivery.join;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -25,9 +22,9 @@ public class JoinController {
         return "pages/join/join";
     }
 
-    @RequestMapping(value = "/join2", method = RequestMethod.POST)
-    public String join2(@ModelAttribute JoinEntity joinEntity, Model model) {
-        joinService.join(joinEntity);
+    @RequestMapping(value = "/saveMember", method = RequestMethod.POST)
+    public String saveMember(@ModelAttribute JoinDTO joinDTO, Model model) {
+        joinService.join(joinDTO);
         return "pages/join/join";
     }
 

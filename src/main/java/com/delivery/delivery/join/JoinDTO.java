@@ -1,12 +1,12 @@
-package com.delivery.deliveryback.join;
+package com.delivery.delivery.join;
 
-
-import lombok.Data;
 import lombok.Getter;
-import lombok.RequiredArgsConstructor;
+import lombok.Setter;
 
-@Data
-public class JoinEntity {
+
+@Getter
+@Setter
+public class JoinDTO {
 
     private int seq;
     private String id;
