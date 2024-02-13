@@ -6,6 +6,7 @@ spring:
     # thymeleaf html파일 경로 세팅
     prefix: classpath:/templates/
     suffix: .html
+    check-template-location: true
   # db 연결
   datasource:
     url: jdbc:mysql://delivery-mysql.c7xm0ea8m8g7.us-west-1.rds.amazonaws.com:3306

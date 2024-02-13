@@ -16,7 +16,7 @@ public class JoinController {
 
     @RequestMapping(value = "/join", method = RequestMethod.GET)
     public String join() {
-        return "/join/join";
+        return "pages/join/join";
     }
 
     @RequestMapping(value = "/join2", method = RequestMethod.POST)
