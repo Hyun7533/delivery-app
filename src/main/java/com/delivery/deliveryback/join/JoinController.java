@@ -28,7 +28,7 @@ public class JoinController {
     @RequestMapping(value = "/join2", method = RequestMethod.POST)
     public String join2(@ModelAttribute JoinEntity joinEntity, Model model) {
         joinService.join(joinEntity);
-        return "/join/join";
+        return "pages/join/join";
     }
 
 }

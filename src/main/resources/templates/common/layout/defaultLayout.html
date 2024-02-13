@@ -5,8 +5,8 @@
 <!--    <title layout:title-pattern="$LAYOUT_TITLE : $CONTENT_TITLE">공통 타이틀</title>-->
 </head>
 <body>
-    <header th:replace="common/fragments/header :: HeaderFragment"></header>
+    <header th:replace="~{common/fragments/config :: ConfigFragment}"></header>
     <th:block layout:fragment="Content"></th:block>
-    <footer th:replace="common/fragments/footer :: FooterFragment"></footer>
+    <footer th:replace="~{common/fragments/footer :: FooterFragment}"></footer>
 </body>
 </html>
