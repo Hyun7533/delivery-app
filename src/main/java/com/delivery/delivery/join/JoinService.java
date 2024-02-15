@@ -16,9 +16,14 @@ public class JoinService {
 		this.joinMapper = joinMapper;
 	}
 
-    public JoinEntity saveMember(JoinEntity joinEntity) {
-        joinMapper.saveMember(joinEntity);
-        return joinEntity;
+    public JoinDTO saveMember(JoinDTO joinDTO) {
+        joinMapper.saveMember(JoinEntity.builder()
+                        .id(joinDTO.getId())
+                        .pw(joinDTO.getPw())
+                        .email(joinDTO.getEmail())
+                        .address(joinDTO.getAddress())
+                .build());
+        return joinDTO;
     }
 
 }

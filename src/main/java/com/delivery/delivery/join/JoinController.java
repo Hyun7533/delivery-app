@@ -23,8 +23,8 @@ public class JoinController {
     }
 
     @RequestMapping(value = "/saveMember", method = RequestMethod.POST)
-    public String saveMember(@ModelAttribute JoinEntity joinEntity, Model model) {
-        joinService.saveMember(joinEntity);
+    public String saveMember(@ModelAttribute JoinDTO joinDTO, Model model) {
+        joinService.saveMember(joinDTO);
         return "pages/join/join";
     }
 
