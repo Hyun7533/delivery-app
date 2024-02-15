@@ -17,12 +17,12 @@ public class JoinService {
 	}
 
     public JoinDTO saveMember(JoinDTO joinDTO) {
-        joinMapper.saveMember(JoinEntity.builder()
-                        .id(joinDTO.getId())
-                        .pw(joinDTO.getPw())
-                        .email(joinDTO.getEmail())
-                        .address(joinDTO.getAddress())
-                .build());
+        joinMapper.saveMember(new JoinEntity(
+                joinDTO.getId(),
+                joinDTO.getPw(),
+                joinDTO.getEmail(),
+                joinDTO.getAddress()
+        ));
         return joinDTO;
     }
 
