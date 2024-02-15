@@ -1,0 +1,21 @@
+spring:
+  mvc:
+    # thymeleaf 정적파일 경로 세팅
+    static-path-pattern: /static/**
+  thymeleaf:
+    # thymeleaf html파일 경로 세팅
+    prefix: classpath:/templates/
+    suffix: .html
+    check-template-location: true
+  # db 연결
+  datasource:
+    url: jdbc:mysql://delivery-mysql.c7xm0ea8m8g7.us-west-1.rds.amazonaws.com:3306
+    username: root
+    password: delivery0211
+    driver-class-name: com.mysql.cj.jdbc.Driver
+# mybatis 설정
+mybatis:
+  mapper-locations: mapper/**/*.xml
+  type-aliases-package: com.delivery.delivery
+
+
