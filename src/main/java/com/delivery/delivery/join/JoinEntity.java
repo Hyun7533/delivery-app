@@ -1,22 +1,31 @@
 package com.delivery.delivery.join;
 
 
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import lombok.*;
 
+@Entity
 @Getter
+@AllArgsConstructor // 모든 args 생성자
+@NoArgsConstructor // 기본 생성자 추가
 public class JoinEntity {
 
+    @Id
     private int seq;
-    private final String id;
-    private final String pw;
-    private final String email;
-    private final String address;
 
-    public JoinEntity(String id, String pw, String email, String address) {
-        this.id = id;
-        this.pw = pw;
-        this.email = email;
-        this.address = address;
-    }
+    @Column
+    private String id;
+
+    @Column
+    private String pw;
+
+    @Column
+    private String email;
+
+    @Column
+    private String address;
+
 
 }

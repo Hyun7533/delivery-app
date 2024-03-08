@@ -9,10 +9,10 @@ spring:
     check-template-location: true
   # db 연결
   datasource:
-    url: jdbc:mysql://delivery-mysql.c7xm0ea8m8g7.us-west-1.rds.amazonaws.com:3306
-    username: root
-    password: delivery0211
-    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:h2:tcp://localhost/~/test
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
 # mybatis 설정
 mybatis:
   mapper-locations: mapper/**/*.xml

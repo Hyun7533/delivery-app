@@ -15,11 +15,7 @@ public class ProductController {
     public ProductController(ProductService productService) {
     	this.productService = productService;
     }
-    
-    @GetMapping("/product")
-    public List<ProductEntity> searchProduct() {
-        return productService.searchProduct();
-    }
+
 
 
 }

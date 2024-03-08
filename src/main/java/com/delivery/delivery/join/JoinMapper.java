@@ -1,5 +1,6 @@
 package com.delivery.delivery.join;
 
+
 import org.apache.ibatis.annotations.Mapper;
 
 @Mapper

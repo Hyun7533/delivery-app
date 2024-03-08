@@ -1,10 +1,13 @@
 package com.delivery.delivery.join;
 
+import com.delivery.delivery.product.ProductEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+
+
 
 @Controller
 public class JoinController {
@@ -23,7 +26,7 @@ public class JoinController {
 
     @RequestMapping(value = "/saveMember", method = RequestMethod.POST)
     public String saveMember(@ModelAttribute JoinDTO joinDTO) {
-        joinService.saveMember(joinDTO);
+        joinService.saveMember(new JoinEntity(), new ProductEntity());
         return "/pages/home";
     }
 

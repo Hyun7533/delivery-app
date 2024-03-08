@@ -1,12 +1,19 @@
 package com.delivery.delivery.product;
 
-import lombok.Data;
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
+import lombok.*;
 
 import java.util.Date;
 
-@Data
+@Entity
+@Getter
+@AllArgsConstructor // 모든 args 생성자
+@NoArgsConstructor // 기본 생성자 추가
 public class ProductEntity {
 
+    @Id @Generated
     private Integer productSeq;
 
     private String productName;
@@ -14,11 +21,4 @@ public class ProductEntity {
     private Integer productPrice;
 
     private Date insertTime;
-
-    public ProductEntity(Integer productSeq, String productName, Integer productPrice, Date insertTime) {
-        this.productSeq = productSeq;
-        this.productName = productName;
-        this.productPrice = productPrice;
-        this.insertTime = insertTime;
-    }
 }
