@@ -13,7 +13,6 @@ import org.springframework.transaction.annotation.Transactional;
 @RequiredArgsConstructor
 public class JoinService {
 
-    private final ProductService productService;
     private final JoinRepository joinRepository;
 
     public JoinDTO saveMember(JoinEntity joinEntity, ProductEntity productEntity) {

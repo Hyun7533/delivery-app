@@ -3,6 +3,7 @@ package com.delivery.delivery.product;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import lombok.*;
 
 import java.util.Date;
@@ -11,6 +12,7 @@ import java.util.Date;
 @Getter
 @AllArgsConstructor // 모든 args 생성자
 @NoArgsConstructor // 기본 생성자 추가
+@Table(name = "ITEM")
 public class ProductEntity {
 
     @Id @Generated
